@@ -276,7 +276,7 @@ namespace control_system
             bool start = true;
         };
 
-#include "pi.tpp"
+#include "../../src/pi/pi.tpp"
     }
 }
 

@@ -256,7 +256,7 @@ namespace control_system
             T u_max = 9999999999;
         };
 
-#include "pd.tpp"
+#include "../../src/pd/pd.tpp"
     }
 }
 

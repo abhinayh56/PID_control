@@ -235,7 +235,7 @@ namespace control_system
 			T u_max = 9999999999;
 		};
 
-#include "i.tpp"
+#include "../../src/integral/i.tpp"
 	}
 }
 

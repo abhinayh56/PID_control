@@ -386,7 +386,7 @@ namespace control_system
             uint8_t start = 0;
         };
 
-#include "pid_lpf_1_ff.tpp"
+#include "../../src/pid/pid_lpf_1_ff.tpp"
     }
 }
 

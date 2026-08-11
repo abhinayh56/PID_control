@@ -515,7 +515,7 @@ namespace control_system
             bool start = true;
         };
 
-#include "pid_gs.tpp"
+#include "../../src/pid/pid_gs.tpp"
     }
 }
 

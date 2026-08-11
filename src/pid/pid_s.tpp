@@ -1,4 +1,4 @@
-#include "pid_s.h"
+#include "../../include/pid/pid_s.h"
 
 template <typename T>
 control_system::pid::PID_S<T>::PID_S()

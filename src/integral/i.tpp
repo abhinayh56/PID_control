@@ -1,4 +1,4 @@
-#include "i.h"
+#include "../../include/integral/i.h"
 
 template <typename T>
 control_system::integral::I<T>::I()

@@ -1,4 +1,4 @@
-#include "p.h"
+#include "../../include/proportional/p.h"
 
 template <typename T>
 control_system::proportional::P<T>::P()

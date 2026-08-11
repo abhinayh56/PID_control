@@ -416,7 +416,7 @@ namespace control_system
             bool start = true;
         };
 
-#include "pid_s.tpp"
+#include "../../src/pid/pid_s.tpp"
     }
 }
 

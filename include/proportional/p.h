@@ -164,7 +164,7 @@ namespace control_system
             T u_max = 9999999999;
         };
 
-#include "p.tpp"
+#include "../../src/proportional/p.tpp"
     }
 }
 
