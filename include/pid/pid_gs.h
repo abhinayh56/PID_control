@@ -3,9 +3,7 @@
 
 #include <cstdint>
 #include "filters.h"
-#include "math_lite.h"
-
-using namespace math_lite::math_general;
+#include "../utility/utility.h"
 
 namespace control_system
 {

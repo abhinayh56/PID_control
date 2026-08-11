@@ -28,7 +28,7 @@ T control_system::integral::I<T>::update(T x_0, T x)
 {
 	T e_k = x_0 - x;
 	T u_k = u_k_1 + Ki * dt * e_k;
-	u_k = Math_general<T>::saturate(u_k, -u_max, u_max);
+	u_k = saturate(u_k, -u_max, u_max);
 	u_k_1 = u_k;
 	return u_k;
 }

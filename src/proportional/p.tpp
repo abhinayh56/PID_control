@@ -22,7 +22,7 @@ void control_system::proportional::P<T>::set_param(T Kp_, T u_max_)
 template <typename T>
 T control_system::proportional::P<T>::update(T x_0, T x)
 {
-	return Math_general<T>::saturate(Kp * (x_0 - x), -u_max, u_max);
+	return saturate(Kp * (x_0 - x), -u_max, u_max);
 }
 
 template <typename T>

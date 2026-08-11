@@ -52,7 +52,7 @@ T control_system::pid::PID_GS<T>::update(T x_0, T x, T u_ff_, T op_cond_)
     P = Kp * e_k;
 
     I = I + Ki * e_k * dt;
-    I = Math_general<T>::saturate(I, -I_max, I_max);
+    I = saturate(I, -I_max, I_max);
 
     if (start == true)
     {
@@ -71,7 +71,7 @@ T control_system::pid::PID_GS<T>::update(T x_0, T x, T u_ff_, T op_cond_)
     }
     e_k_1 = e_k;
     u = u_ff + P + I + D;
-    u = Math_general<T>::saturate(u, -u_max, u_max);
+    u = saturate(u, -u_max, u_max);
     return u;
 }
 

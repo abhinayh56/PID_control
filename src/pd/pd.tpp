@@ -40,7 +40,7 @@ T control_system::pd::PD<T>::update(T x_0, T x)
 	{
 		u_k = (Kp + Kd / dt) * e_k - (Kd / dt) * e_k_1;
 	}
-	u_k = Math_general<T>::saturate(u_k, -u_max, u_max);
+	u_k = saturate(u_k, -u_max, u_max);
 	e_k_1 = e_k;
 	return u_k;
 }

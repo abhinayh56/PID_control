@@ -42,7 +42,7 @@ T control_system::derivative::D_LPF_1<T>::update(T x_0, T x)
 	{
 		u_k = (tau * u_k_1 + Kd * (e_k - e_k_1)) / (tau + dt);
 	}
-	u_k = Math_general<T>::saturate(u_k, -u_max, u_max);
+	u_k = saturate(u_k, -u_max, u_max);
 	e_k_1 = e_k;
 	u_k_1 = u_k;
 	return u_k;

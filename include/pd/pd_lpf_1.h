@@ -1,9 +1,7 @@
 #ifndef CONTROL_SYSTEM_PD_PD_LPF_1_H
 #define CONTROL_SYSTEM_PD_PD_LPF_1_H
 
-#include "math_lite.h"
-
-using namespace math_lite::math_general;
+#include "../utility/utility.h"
 
 namespace control_system
 {

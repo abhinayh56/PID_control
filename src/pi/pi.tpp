@@ -42,7 +42,7 @@ T control_system::pi::PI<T>::update(T x_0, T x)
 	{
 		u_k = u_k_1 + (Kp + Ki * dt) * e_k - Kp * e_k_1;
 	}
-	u_k = Math_general<T>::saturate(u_k, -u_max, u_max);
+	u_k = saturate(u_k, -u_max, u_max);
 	u_k_1 = u_k;
 	e_k_1 = e_k;
 	return u_k;
