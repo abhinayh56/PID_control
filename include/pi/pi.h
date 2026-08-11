@@ -27,9 +27,7 @@
 #ifndef CONTROL_SYSTEM_PI_PI_H
 #define CONTROL_SYSTEM_PI_PI_H
 
-
 #include "../utility/utility.h"
-
 
 namespace control_system
 {
@@ -78,7 +76,6 @@ namespace control_system
         class PI
         {
         public:
-
             /**
              * @brief Constructs a PI controller.
              *
@@ -225,9 +222,7 @@ namespace control_system
              */
             T get_u_max();
 
-
         private:
-
             /**
              * @brief Controller sampling time.
              *
@@ -281,10 +276,8 @@ namespace control_system
             bool start = true;
         };
 
-
 #include "pi.tpp"
     }
 }
-
 
 #endif

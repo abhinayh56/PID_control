@@ -28,11 +28,9 @@
 #ifndef CONTROL_SYSTEM_PID_PID_GS_H
 #define CONTROL_SYSTEM_PID_PID_GS_H
 
-
 #include <cstdint>
 #include "filters.h"
 #include "../utility/utility.h"
-
 
 namespace control_system
 {
@@ -104,7 +102,6 @@ namespace control_system
         class PID_GS
         {
         public:
-
             /**
              * @brief Constructs a gain-scheduled PID controller.
              *
@@ -113,7 +110,6 @@ namespace control_system
              * state initialized to their default values.
              */
             PID_GS();
-
 
             /**
              * @brief Initializes the PID controller.
@@ -211,7 +207,6 @@ namespace control_system
              */
             void set_gain_lookup_table(T *op_cond_arr_, T *Kp_arr_, T *Ki_arr_, T *Kd_arr_, uint16_t len_arr_);
 
-
             /**
              * @brief Sets the controller sampling time.
              *
@@ -274,7 +269,6 @@ namespace control_system
              * @param[in] u_ff_ Feed-forward control input.
              */
             void set_ff(T u_ff_);
-
 
             /**
              * @brief Gets the controller sampling time.
@@ -340,7 +334,6 @@ namespace control_system
              */
             T get_ff();
 
-
             /**
              * @brief Gets the proportional contribution.
              *
@@ -376,14 +369,11 @@ namespace control_system
              */
             T get_e_k_1();
 
-
         private:
-
             /**
              * @brief First-order low-pass filter used for derivative filtering.
              */
             LPF_1<T> lpf;
-
 
             /**
              * @brief Updates the PID gains according to the operating condition.
@@ -409,7 +399,6 @@ namespace control_system
              * @return Interpolated value corresponding to @p x.
              */
             T interpolate(T x, T x1, T y1, T x2, T y2);
-
 
             /**
              * @brief Controller sampling time.
@@ -458,7 +447,6 @@ namespace control_system
              */
             T fc = 0.0;
 
-
             /**
              * @brief Previous control error.
              */
@@ -489,7 +477,6 @@ namespace control_system
              */
             T u_ff = 0.0;
 
-
             /**
              * @brief Operating-condition lookup table.
              *
@@ -519,7 +506,6 @@ namespace control_system
              */
             uint16_t len_arr;
 
-
             /**
              * @brief Controller startup state.
              *
@@ -529,10 +515,8 @@ namespace control_system
             bool start = true;
         };
 
-
 #include "pid_gs.tpp"
     }
 }
-
 
 #endif

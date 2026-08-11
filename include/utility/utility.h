@@ -43,6 +43,10 @@
  * double output = saturate(input, -10.0, 10.0);
  * @endcode
  */
+
+#ifndef CONTROL_SYSTEM_PID_UTILITY_H
+#define CONTROL_SYSTEM_PID_UTILITY_H
+
 template <typename T>
 inline constexpr T saturate(T x, T x_min, T x_max)
 {
@@ -59,6 +63,5 @@ inline constexpr T saturate(T x, T x_min, T x_max)
         return x;
     }
 }
-
 
 #endif // CONTROL_SYSTEM_PID_UTILITY_H

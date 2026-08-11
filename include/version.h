@@ -29,7 +29,6 @@
 #ifndef CONTROL_SYSTEM_VERSION_H
 #define CONTROL_SYSTEM_VERSION_H
 
-
 /**
  * @def CONTROL_SYSTEM_VERSION_MAJOR
  * @brief Major version number of the Control System library.
@@ -39,7 +38,6 @@
  * behavioral changes are introduced.
  */
 #define CONTROL_SYSTEM_VERSION_MAJOR 1
-
 
 /**
  * @def CONTROL_SYSTEM_VERSION_MINOR
@@ -51,7 +49,6 @@
  */
 #define CONTROL_SYSTEM_VERSION_MINOR 0
 
-
 /**
  * @def CONTROL_SYSTEM_VERSION_PATCH
  * @brief Patch version number of the Control System library.
@@ -61,7 +58,6 @@
  * fixes and maintenance changes.
  */
 #define CONTROL_SYSTEM_VERSION_PATCH 0
-
 
 /**
  * @def CONTROL_SYSTEM_VERSION
@@ -78,7 +74,6 @@
  */
 #define CONTROL_SYSTEM_VERSION (CONTROL_SYSTEM_VERSION_MAJOR * 10000 + CONTROL_SYSTEM_VERSION_MINOR * 100 + CONTROL_SYSTEM_VERSION_PATCH)
 
-
 /**
  * @def STRINGIFY_HELPER
  * @brief Helper macro used to convert a preprocessor value to a string.
@@ -87,7 +82,6 @@
  */
 #define STRINGIFY_HELPER(x) #x
 
-
 /**
  * @def STRINGIFY
  * @brief Converts a preprocessor value to a string literal.
@@ -95,7 +89,6 @@
  * @internal
  */
 #define STRINGIFY(x) STRINGIFY_HELPER(x)
-
 
 /**
  * @def CONTROL_SYSTEM_VERSION_STRING
@@ -107,7 +100,6 @@
  * For the current version, this evaluates to @c "1.0.0".
  */
 #define CONTROL_SYSTEM_VERSION_STRING STRINGIFY(CONTROL_SYSTEM_VERSION_MAJOR) "." STRINGIFY(CONTROL_SYSTEM_VERSION_MINOR) "." STRINGIFY(CONTROL_SYSTEM_VERSION_PATCH)
-
 
 /**
  * @namespace CONTROL_SYSTEM
@@ -144,6 +136,5 @@ namespace CONTROL_SYSTEM
      */
     inline constexpr const char *version_string = CONTROL_SYSTEM_VERSION_STRING;
 }
-
 
 #endif

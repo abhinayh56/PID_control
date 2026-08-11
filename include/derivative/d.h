@@ -26,9 +26,7 @@
 #ifndef CONTROL_SYSTEM_DERIVATIVE_D_H
 #define CONTROL_SYSTEM_DERIVATIVE_D_H
 
-
 #include "../utility/utility.h"
-
 
 namespace control_system
 {
@@ -78,7 +76,6 @@ namespace control_system
         class D
         {
         public:
-
             /**
              * @brief Constructs a derivative controller.
              *
@@ -199,9 +196,7 @@ namespace control_system
              */
             T get_u_max();
 
-
         private:
-
             /**
              * @brief Controller sampling time.
              *
@@ -242,10 +237,8 @@ namespace control_system
             T u_max = 9999999999;
         };
 
-
 #include "d.tpp"
     }
 }
-
 
 #endif

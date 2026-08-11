@@ -28,9 +28,7 @@
 #ifndef CONTROL_SYSTEM_PROPORTIONAL_P_H
 #define CONTROL_SYSTEM_PROPORTIONAL_P_H
 
-
 #include "../utility/utility.h"
-
 
 namespace control_system
 {
@@ -72,7 +70,6 @@ namespace control_system
         class P
         {
         public:
-
             /**
              * @brief Constructs a proportional controller.
              *
@@ -151,9 +148,7 @@ namespace control_system
              */
             T get_u_max();
 
-
         private:
-
             /**
              * @brief Proportional gain.
              */
@@ -169,10 +164,8 @@ namespace control_system
             T u_max = 9999999999;
         };
 
-
 #include "p.tpp"
     }
 }
-
 
 #endif

@@ -26,9 +26,7 @@
 #ifndef CONTROL_SYSTEM_INTEGRAL_I_H
 #define CONTROL_SYSTEM_INTEGRAL_I_H
 
-
 #include "../utility/utility.h"
-
 
 namespace control_system
 {
@@ -75,7 +73,6 @@ namespace control_system
 		class I
 		{
 		public:
-
 			/**
 			 * @brief Constructs an integral controller.
 			 *
@@ -205,9 +202,7 @@ namespace control_system
 			 */
 			T get_u_max();
 
-
 		private:
-
 			/**
 			 * @brief Controller sampling time.
 			 *
@@ -240,10 +235,8 @@ namespace control_system
 			T u_max = 9999999999;
 		};
 
-
 #include "i.tpp"
 	}
 }
-
 
 #endif

@@ -29,10 +29,8 @@
 #ifndef CONTROL_SYSTEM_PID_PID_H
 #define CONTROL_SYSTEM_PID_PID_H
 
-
 #include <cstdint>
 #include "../utility/utility.h"
-
 
 namespace control_system
 {
@@ -84,7 +82,6 @@ namespace control_system
         class PID
         {
         public:
-
             /**
              * @brief Constructs a PID controller.
              *
@@ -261,9 +258,7 @@ namespace control_system
              */
             T get_u_max();
 
-
         private:
-
             /**
              * @brief Controller sampling time.
              *
@@ -328,10 +323,8 @@ namespace control_system
             uint8_t start = 0;
         };
 
-
 #include "pid.tpp"
     }
 }
-
 
 #endif

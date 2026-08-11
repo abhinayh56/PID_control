@@ -28,9 +28,7 @@
 #ifndef CONTROL_SYSTEM_PD_PD_LPF_1_H
 #define CONTROL_SYSTEM_PD_PD_LPF_1_H
 
-
 #include "../utility/utility.h"
-
 
 namespace control_system
 {
@@ -84,7 +82,6 @@ namespace control_system
         class PD_LPF_1
         {
         public:
-
             /**
              * @brief Constructs a PD controller with filtered derivative.
              *
@@ -248,9 +245,7 @@ namespace control_system
              */
             T get_u_max();
 
-
         private:
-
             /**
              * @brief Controller sampling time.
              *
@@ -313,10 +308,8 @@ namespace control_system
             T u_max = 9999999999;
         };
 
-
 #include "pd_lpf_1.tpp"
     }
 }
-
 
 #endif

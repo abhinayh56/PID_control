@@ -35,7 +35,6 @@
 #ifndef CONTROL_SYSTEM_H
 #define CONTROL_SYSTEM_H
 
-
 /**
  * @brief Proportional controller.
  */
@@ -100,6 +99,5 @@
  * @brief PID controller using gain scheduling.
  */
 #include "pid/pid_gs.h"
-
 
 #endif

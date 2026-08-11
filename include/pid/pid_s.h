@@ -24,10 +24,8 @@
 #ifndef CONTROL_SYSTEM_PID_PID_S_H
 #define CONTROL_SYSTEM_PID_PID_S_H
 
-
 #include "filters.h"
 #include "../utility/utility.h"
-
 
 namespace control_system
 {
@@ -80,7 +78,6 @@ namespace control_system
         class PID_S
         {
         public:
-
             /**
              * @brief Constructs a PID controller.
              *
@@ -89,7 +86,6 @@ namespace control_system
              * state initialized to their default values.
              */
             PID_S();
-
 
             /**
              * @brief Initializes the PID controller.
@@ -167,7 +163,6 @@ namespace control_system
              */
             void merge(T u_k_1_);
 
-
             /**
              * @brief Sets the controller sampling time.
              *
@@ -230,7 +225,6 @@ namespace control_system
              * @param[in] u_ff_ Feed-forward control input.
              */
             void set_ff(T u_ff_);
-
 
             /**
              * @brief Gets the controller sampling time.
@@ -296,7 +290,6 @@ namespace control_system
              */
             T get_ff();
 
-
             /**
              * @brief Gets the proportional contribution.
              *
@@ -332,14 +325,11 @@ namespace control_system
              */
             T get_e_k_1();
 
-
         private:
-
             /**
              * @brief First-order low-pass filter used for derivative filtering.
              */
             LPF_1<T> lpf;
-
 
             /**
              * @brief Controller sampling time.
@@ -387,7 +377,6 @@ namespace control_system
              */
             T fc = 0.0;
 
-
             /**
              * @brief Previous control error.
              */
@@ -418,7 +407,6 @@ namespace control_system
              */
             T u_ff = 0.0;
 
-
             /**
              * @brief Controller startup state.
              *
@@ -428,10 +416,8 @@ namespace control_system
             bool start = true;
         };
 
-
 #include "pid_s.tpp"
     }
 }
-
 
 #endif
