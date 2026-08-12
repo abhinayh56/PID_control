@@ -1,0 +1,133 @@
+/** 
+ * @mainpage PID Control Library
+ *
+ * @section intro_sec Introduction
+ *
+ * This library provides a collection of reusable C++ components for implementing
+ * Proportional-Integral-Derivative (PID) based control systems.
+ *
+ * The library is designed to provide modular implementations of individual
+ * control actions as well as commonly used combinations such as P, PI, PD, and
+ * PID controllers.
+ *
+ * @section features_sec Features
+ *
+ * The library provides implementations for:
+ *
+ * - Proportional (P) control
+ * - Integral (I) control
+ * - Derivative (D) control
+ * - Proportional-Integral (PI) control
+ * - Proportional-Derivative (PD) control
+ * - Proportional-Integral-Derivative (PID) control
+ * - PID controllers with different structural forms
+ * - Derivative low-pass filtering
+ * - PID low-pass filtering
+ * - Feed-forward PID control
+ * - Utility functions for control-system implementations
+ *
+ * @section organization_sec Library Organization
+ *
+ * The library is organized into separate modules according to the type of
+ * controller:
+ *
+ * @code
+ * include/
+ * ├── control_system.h
+ * ├── derivative/
+ * │   ├── d.h
+ * │   └── d_lpf_1.h
+ * ├── integral/
+ * │   └── i.h
+ * ├── pd/
+ * │   ├── pd.h
+ * │   └── pd_lpf_1.h
+ * ├── pi/
+ * │   └── pi.h
+ * ├── pid/
+ * │   ├── pid.h
+ * │   ├── pid_gs.h
+ * │   ├── pid_lpf_1.h
+ * │   ├── pid_lpf_1_ff.h
+ * │   ├── pid_p.h
+ * │   └── pid_s.h
+ * ├── proportional/
+ * │   └── p.h
+ * └── utility/
+ *     └── utility.h
+ * @endcode
+ *
+ * The implementation of the templates is located in the corresponding
+ * `.tpp` files under the `src` directory.
+ *
+ * @section controllers_sec Controllers
+ *
+ * @subsection p_controller Proportional Controller
+ *
+ * The proportional controller generates a control action proportional to
+ * the current error.
+ *
+ * @subsection i_controller Integral Controller
+ *
+ * The integral controller accumulates the error over time and is commonly
+ * used to eliminate steady-state error.
+ *
+ * @subsection d_controller Derivative Controller
+ *
+ * The derivative controller generates a control action based on the rate
+ * of change of the error.
+ *
+ * @subsection pi_controller PI Controller
+ *
+ * Combines proportional and integral actions to provide improved tracking
+ * while eliminating steady-state error.
+ *
+ * @subsection pd_controller PD Controller
+ *
+ * Combines proportional and derivative actions to improve transient response
+ * and damping.
+ *
+ * @subsection pid_controller PID Controller
+ *
+ * Combines proportional, integral, and derivative actions:
+ *
+ * @f[
+ * u(t) = K_p e(t) + K_i \int e(t)\,dt + K_d \frac{de(t)}{dt}
+ * @f]
+ *
+ * where:
+ *
+ * - @f$e(t)@f$ is the control error.
+ * - @f$K_p@f$ is the proportional gain.
+ * - @f$K_i@f$ is the integral gain.
+ * - @f$K_d@f$ is the derivative gain.
+ * - @f$u(t)@f$ is the controller output.
+ *
+ * @section filtering_sec Filtering
+ *
+ * The library provides low-pass filtered derivative and PID implementations
+ * to reduce the influence of high-frequency measurement noise on the
+ * derivative action.
+ *
+ * @section feedforward_sec Feed-Forward Control
+ *
+ * The library also provides a PID implementation with feed-forward support.
+ * Feed-forward control can be used when a known component of the required
+ * control action can be estimated from the desired trajectory or system
+ * dynamics.
+ *
+ * @section documentation_sec Documentation
+ *
+ * This documentation is generated using Doxygen.
+ *
+ * The public API is provided through the header files under the `include`
+ * directory, while template implementations are contained in the corresponding
+ * `.tpp` files under the `src` directory.
+ *
+ * @section license_sec License
+ *
+ * @author
+ * 
+ * @version
+ *
+ */
