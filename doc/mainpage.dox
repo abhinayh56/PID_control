@@ -33,28 +33,28 @@
  *
  * @code
  * include/
- * ├── control_system.h
- * ├── derivative/
- * │   ├── d.h
- * │   └── d_lpf_1.h
- * ├── integral/
- * │   └── i.h
- * ├── pd/
- * │   ├── pd.h
- * │   └── pd_lpf_1.h
- * ├── pi/
- * │   └── pi.h
- * ├── pid/
- * │   ├── pid.h
- * │   ├── pid_gs.h
- * │   ├── pid_lpf_1.h
- * │   ├── pid_lpf_1_ff.h
- * │   ├── pid_p.h
- * │   └── pid_s.h
- * ├── proportional/
- * │   └── p.h
- * └── utility/
- *     └── utility.h
+ * +-- control_system.h
+ * +-- derivative/
+ *     +-- d.h
+ *     +-- d_lpf_1.h
+ * +-- integral/
+ *     +-- i.h
+ * +-- pd/
+ *     +-- pd.h
+ *     +-- pd_lpf_1.h
+ * +-- pi/
+ *     +-- pi.h
+ * +-- pid/
+ *     +-- pid.h
+ *     +-- pid_gs.h
+ *     +-- pid_lpf_1.h
+ *     +-- pid_lpf_1_ff.h
+ *     +-- pid_p.h
+ *     +-- pid_s.h
+ * +-- proportional/
+ *     +-- p.h
+ * +-- utility/
+ *     +-- utility.h
  * @endcode
  *
  * The implementation of the templates is located in the corresponding
